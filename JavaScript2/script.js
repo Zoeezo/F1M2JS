@@ -40,6 +40,11 @@ function trekAf(getal1, getal2) {
 
 function deel(getal1, getal2) {
     let antwoord = getal1 / getal2;
+
+    if(!Number.isFinite(antwoord)) {
+        antwoord = 'Delen door 0 kan niet.';
+    }
+
     console.log('delen ' + antwoord);
     delen.innerHTML = antwoord;
 }
